@@ -34,7 +34,9 @@ Route::group([
     });
 });
 
-Route::resource('categories','CategoryController');
+
+Route::resource('categories','CategoryController')->middleware('auth:api');
+
 
 /*  Route::get('traer/{category}',function(App\Category $category){
     return $category;
